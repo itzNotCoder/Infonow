@@ -1,6 +1,9 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.views.static import serve
+from django.conf.urls import url
+from django.conf import settings
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -19,4 +22,7 @@ urlpatterns = [
     # path('cricket-news', views.cricket_news, name='cricket_news'),
     # path('bitcoin-news', views.bitcoin_news, name='bitcoin_news'),
     # path('coronavirus-news', views.coronavirus_news, name='coronavirus_news'),
+
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
