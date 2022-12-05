@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block css %}
+
+#title{
+    color: #eed200;
+    text-align: center;
+}
+
+#para{
+    margin-top: 50px;
+    margin-left: 240px;
+    margin-right: 240px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+#contact-us-btn{
+    background-color: white;
+    color: #05070a;
+    font-weight: bold;
+    border-radius: 7px;
+    width: 230px;
+    height: 45px;
+    font-size: 30px;
+    position: absolute;
+    left: 520px;
+    top: 432px;
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+#contact-us-btn:hover{
+    cursor: pointer;
+    background-color: #eed200;
+    color: black;
+}
+
+{% endblock css %}
+
+{% block body %}
+    <h1 id="title">About Us</h1>
+    <p id="para">We are all very different. We were born in different cities, at different times. We love different music, food, movies. But we have something that unites us all. It is our company, we are its heart. We are not just a team, we are a family.</p>
+
+    <button><a id="contact-us-btn" href="/contactus">Contact Us</a></button>
+
+{% endblock body %}

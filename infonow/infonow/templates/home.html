@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block css %}
+*{
+    background-color: #05070a;
+    color: white;
+}
+
+#logo{
+    position: absolute;
+    top: 130px;
+    left: 450px;
+}
+
+#go-to-news-btn{
+    background-color: white;
+    color: #05070a;
+    font-weight: bold;
+    border-radius: 7px;
+    width: 230px;
+    height: 45px;
+    font-size: 30px;
+    position: absolute;
+    left: 520px;
+    top: 480px;
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+#go-to-news-btn:hover{
+    cursor: pointer;
+    background-color: #eed200;
+    color: black;
+}
+
+{% endblock css %}
+
+{% block body %}
+    {% load static %}
+    <img src="/static/logo.png" alt="logo" width="400px" id="logo">
+    <button><a id="go-to-news-btn" href="/news">News</a></button>
+    <img src="/static/square 1.jpg" alt="square" style="position: absolute; left: 0px; top: 75px;">
+{% endblock body %}

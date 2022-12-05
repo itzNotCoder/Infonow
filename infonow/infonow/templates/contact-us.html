@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block css %}
+input[type=text], input[type=email], textarea {
+    color: black;
+    background-color: white;
+    margin-left: 370px;
+    width: 40%;
+    padding: 12px;
+    border: 1px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 15px;
+}
+
+#send-btn{
+    margin-top: -10px;
+    margin-left: 370px;
+    width: 40%;
+    background-color: #eed200;
+    border-radius: 7px;
+    height: 48px;
+    font-size: 25px;
+    padding-top: 6px;
+}
+
+#send-btn:hover{
+    background-color: #cfb700;
+}
+
+{% endblock css %}
+
+{% block body %}
+<h1 style="text-align: center; margin-top: -25px; color: #eed200">Contact Us</h1>
+
+<form action="https://formspree.io/f/xaykrwqq" method="POST">
+{% csrf_token %}
+<input type="text" name="name" placeholder="Enter Your Name" required><br>
+<input type="email" name="email" placeholder="Enter Your Email" required><br>
+<textarea name="message" placeholder="Message..." cols="30" rows="8" required></textarea><br>
+<button type="submit" id="send-btn">Send</button>
+</form>
+{% endblock body %}
