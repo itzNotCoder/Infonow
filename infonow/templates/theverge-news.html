@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}The Verge News{% endblock title %}
+
+{% block body %}
+
+    <h1 style="padding: 10px; text-align: center; color: #cfb700; margin-top: 30px; margin-bottom: 75px;">The Verge  - News</h1>
+
+    <div class="container">
+        {% for hl, des, img in mylist %}
+      
+        <div class="card mb-3" style="width: 300px; margin-left: 0px;">
+          <img src="{{ img }}" alt="image">  
+        </div>
+        <div class="mb-3" style="width: 400px; margin-left: 300px; margin-top: -200px;">
+          <!-- <h4><span class="badge badge-primary" style="height: 29px; margin-top: 20;">Headline:</span></h4> -->
+          <h5 style="padding-top: 15px; padding-left: 10px; margin-top: -25px; font-size: 20px;">{{ hl }}{{ value|linebreaks }}</h5>
+          <h5 style="padding-top: 15px; padding-left: 10px; font-size: 13px; margin-top: -20px; font-weight: 300;">{{ des }}{{ value|linebreaks }}</h5>
+          <br><br><br>
+        </div>
+        {% endfor %}
+{% endblock body %}

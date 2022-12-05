@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}News Channels{% endblock title %}
+
+{% block css %}
+    #title{
+        text-align: center;
+        color: #cfb700;
+    }
+
+    .channels{
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .channels:hover{
+        text-decoration: none;
+        color: #6159f7;
+    }
+
+    .channel-number{
+        font-size: 18px;
+        color: white;
+        margin-left: 50px;
+    }
+{% endblock css %}
+
+{% block body %}
+    <h1 id="title">News Channels</h1><br>
+
+    <p class="channel-number">1.<a href="/espn-news" class="channels">ESPN -  News</a></p>
+    <p class="channel-number">2.<a href="/ign-news" class="channels">IGN -  News</a></p>
+    <p class="channel-number">3.<a href="/cnn-news" class="channels">CNN -  News</a></p>
+    <p class="channel-number">4.<a href="/bbc-news" class="channels">BBC -  News</a></p>
+    <p class="channel-number">5.<a href="/theverge-news" class="channels">The Verge - News</a></p>
+    <p class="channel-number">6.<a href="/techcrunch-news" class="channels">TechCrunch - News</a></p>
+
+    <!-- <hr style="border: 1px solid white;">
+
+    <p class="channel-number">1.<a href="/football-news" class="channels">Football - News</a></p>
+    <p class="channel-number">2.<a href="/basketball-news" class="channels">Basketball - News</a></p>
+    <p class="channel-number">3.<a href="/baseball-news" class="channels">Baseball - News</a></p>
+    <p class="channel-number">4.<a href="/cricket-news" class="channels">Cricket - News</a></p>
+
+    <hr style="border: 1px solid white;">
+
+    <p class="channel-number">1.<a href="/bitcoin-news" class="channels">Bitcoin - News</a></p>
+    <p class="channel-number">2.<a href="/coronavirus-news" class="channels">Coronavirus - News</a></p> -->
+
+{% endblock body %}
